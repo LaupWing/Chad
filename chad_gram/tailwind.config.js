@@ -12,6 +12,8 @@ module.exports = {
             gray3: "#65737e",
             gray4: "#4f5b67",
             gray5: "#343c46",
+            gradient1: "#6782B4",
+            gradient2: "#B1BFD8",
          }
       },
    },
