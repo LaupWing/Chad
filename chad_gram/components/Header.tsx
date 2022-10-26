@@ -25,7 +25,7 @@ const Header = () => {
          </div>
          <AiOutlineHeart 
             size={30}
-            className="text-gray3"
+            className="text-red-400"
          />
       </header>
    )
