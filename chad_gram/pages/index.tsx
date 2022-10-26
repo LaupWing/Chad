@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import { AiOutlineHeart } from "react-icons/ai"
+import { AiOutlineHeart, AiOutlineSearch } from "react-icons/ai"
 
 const Home: NextPage = () => {
    return (
@@ -14,10 +14,14 @@ const Home: NextPage = () => {
                   objectFit="contain"   
                />
             </div>
-            <div className="bg-gray-200 rounded mx-2 flex-1">
+            <div className="bg-gray-200 flex items-center rounded mx-2 flex-1">
+               <AiOutlineSearch 
+                  size={26}
+                  className="ml-2 text-gray-400"
+               />
                <input 
                   type="text" 
-                  className="bg-transparent w-full p-2"
+                  className="bg-transparent w-full p-2 focus:outline-none"
                   placeholder="Search for"
                />
             </div>
