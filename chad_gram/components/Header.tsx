@@ -4,8 +4,8 @@ import { AiOutlineHeart, AiOutlineSearch } from 'react-icons/ai'
 
 const Header = () => {
    return (
-      <header className="flex items-center justify-between w-full px-2">
-         <div className="h-16 w-14 relative">
+      <header className="flex items-center justify-between w-full p-2">
+         <div className="h-14 w-12 relative">
             <Image
                src="/logo.png"
                layout="fill"
