@@ -5,28 +5,12 @@ import { AiOutlineHeart, AiOutlineSearch } from "react-icons/ai"
 
 const Home: NextPage = () => {
    return (
-      <div className="flex w-full">
-         <header className="flex items-center justify-between w-full px-2">
-            <div className="h-16 w-14 relative">
-               <Image 
-                  src="/logo.png" 
-                  layout="fill"
-                  objectFit="contain"   
-               />
+      <div className="flex w-screen h-screen flex-col bg-gray1">
+         <div className="w-full px-0.5">
+            <div className="w-full border-gray2 border h-20 rounded-b shadow">
+
             </div>
-            <div className="bg-gray-200 flex items-center rounded mx-2 flex-1">
-               <AiOutlineSearch 
-                  size={26}
-                  className="ml-2 text-gray-400"
-               />
-               <input 
-                  type="text" 
-                  className="bg-transparent w-full p-2 focus:outline-none"
-                  placeholder="Search for"
-               />
-            </div>
-            <AiOutlineHeart size={30}/>
-         </header>
+         </div>
       </div>
    )
 }
