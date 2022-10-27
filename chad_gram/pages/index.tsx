@@ -5,6 +5,7 @@ import Profile from "../components/Profile"
 import { createRandomPost, createRandomUser } from "../faker"
 import { BsThreeDots } from "react-icons/bs"
 import FeedItem from "../components/FeedItem"
+import Footer from "../components/Footer"
 
 const Home: NextPage = () => {
    const [users, setUsers] = useState<any>([])
@@ -27,6 +28,7 @@ const Home: NextPage = () => {
             </div>
          </div>
          {posts.map((post:any)=> <FeedItem post={post}/>)}
+         <Footer/>
       </div>
    )
 }
