@@ -36,7 +36,17 @@ const Home: NextPage = () => {
                <h2 className="text-sm font-semibold ml-2 gray5">{post.username}</h2>
                <BsThreeDots className="ml-auto" size={24}/>
             </header>
-            <img src={post.image} alt="" />
+            <div 
+               className="w-full relative"
+               style={{
+                  paddingBottom: "125%"
+               }}
+            >
+               <img 
+                  className="h-full absolute object-cover"
+                  src={post.image}
+               />
+            </div>
          </div>}
       </div>
    )
