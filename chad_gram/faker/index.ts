@@ -14,3 +14,11 @@ export function createRandomUser() {
       registeredAt: faker.date.past(),
    }
 }
+
+export function createRandomPost(){
+   return {
+      image: faker.image.abstract(),
+      username: faker.internet.userName(),
+      avatar: faker.image.avatar()
+   }
+}

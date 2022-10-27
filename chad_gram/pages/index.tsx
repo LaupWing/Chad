@@ -2,12 +2,16 @@ import type { NextPage } from "next"
 import { useEffect, useState } from "react"
 import Header from "../components/Header"
 import Profile from "../components/Profile"
-import { createRandomUser } from "../faker"
+import { createRandomPost, createRandomUser } from "../faker"
+import { BsThreeDots } from "react-icons/bs"
 
 const Home: NextPage = () => {
    const [users, setUsers] = useState<any>([])
+   const [post, setPost] = useState<any>(null)
+
    useEffect(()=>{
       setUsers([...new Array(2)].map(_=>createRandomUser()))
+      setPost(createRandomPost())
    },[])
 
    
@@ -21,6 +25,19 @@ const Home: NextPage = () => {
                />))}
             </div>
          </div>
+         {post && <div className="flex flex-col">
+            <header className="border-b border-gray-400 w-full flex items-center flex-shrink-0 p-4 text-gray5">
+               <div className="border-2 border-gray3 p-0.5 rounded-full">
+                  <img 
+                     src={post.avatar} 
+                     className="rounded-full object-fill w-10 flex-shrink-0"
+                  />
+               </div>
+               <h2 className="text-sm font-semibold ml-2 gray5">{post.username}</h2>
+               <BsThreeDots className="ml-auto" size={24}/>
+            </header>
+            <img src={post.image} alt="" />
+         </div>}
       </div>
    )
 }
