@@ -17,7 +17,7 @@ const Home: NextPage = () => {
 
    
    return (
-      <div className="flex w-screen h-screen flex-col bg-gray1">
+      <div className="flex w-screen min-h-screen flex-col bg-gray1">
          <Header/>
          <div className="w-full px-0.5">
             <div className="w-full border-gray2 border p-4 space-x-2 rounded shadow flex">
