@@ -1,10 +1,12 @@
 import React from 'react'
-import { AiOutlineBook, AiOutlineComment, AiOutlineHeart, AiOutlineSend } from "react-icons/ai"
+import { AiOutlineComment, AiOutlineHeart, AiOutlineSend } from "react-icons/ai"
+import { IoSaveOutline, IoSaveSharp } from "react-icons/io5"
 import { BsThreeDots } from "react-icons/bs"
 
 const FeedItem = ({post}:any) => {
+   console.log(post)
    return (
-      <div className="flex flex-col border border-gray2 rounded my-3 shadow-md m-0.5">
+      <div className="flex flex-col border border-gray2 rounded my-3 shadow-md m-0.5 text-gray5">
          <header className="border-b border-gray-400 w-full flex items-center flex-shrink-0 p-4 text-gray5">
             <div className="border-2 border-gray3 p-0.5 rounded-full">
                <img
@@ -26,17 +28,24 @@ const FeedItem = ({post}:any) => {
                src={post.image}
             />
          </div>
-         <div className="px-4 pt-4 pb-2 text-gray5 flex items-center">
-            <AiOutlineHeart size={30}/>
-            <AiOutlineComment size={30} className="mx-3"/>
-            <AiOutlineSend 
-               size={30} 
-               className="transform mb-2.5"
-               style={{
-                  transform: "rotate(-30deg)"
-               }}
-            />
-            <AiOutlineBook size={28} className="ml-auto" />
+         <div className="px-4 flex flex-col pb-4">
+            <div className="pt-4 pb-2 flex items-center">
+               <AiOutlineHeart size={30}/>
+               <AiOutlineComment size={30} className="mx-3"/>
+               <AiOutlineSend 
+                  size={30} 
+                  className="transform mb-2.5"
+                  style={{
+                     transform: "rotate(-30deg)"
+                  }}
+               />
+               <IoSaveOutline size={28} className="ml-auto" />
+            </div>
+            <div className="flex flex-col">
+               <h2 className="font-bold">944 likes</h2>
+               <p className="text-sm py-3"><span className="font-bold">{post.username}</span> {post.description}</p>
+               <p className="text-xs uppercase text-gray3 font-semibold">21 Hours ago</p>
+            </div>
          </div>
       </div>
    )

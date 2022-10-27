@@ -19,6 +19,7 @@ export function createRandomPost(){
    return {
       image: faker.image.abstract(),
       username: faker.internet.userName(),
-      avatar: faker.image.avatar()
+      avatar: faker.image.avatar(),
+      description: faker.lorem.sentence()
    }
 }
