@@ -12,7 +12,7 @@ const Profile = ({user}:any) => {
                />
             </div>
          </div>
-         <h2>{user.username}</h2>
+         <h2 className="text-ellipsis w-14 overflow-hidden mt-2">{user.username}</h2>
       </div>
    )
 }
