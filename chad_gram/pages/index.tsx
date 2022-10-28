@@ -22,12 +22,13 @@ const Home: NextPage = () => {
          <Header/>
          <div className="w-full px-0.5">
             <div className="w-full border-gray2 border p-4 space-x-2 rounded shadow flex">
-               {users.map((user:any) =>(<Profile
+               {users.map((user:any, index:number) =>(<Profile
                   user={user}
+                  key={index}
                />))}
             </div>
          </div>
-         {posts.map((post:any)=> <FeedItem post={post}/>)}
+         {posts.map((post:any, index:number)=> <FeedItem post={post} key={index}/>)}
          <Footer/>
       </div>
    )
