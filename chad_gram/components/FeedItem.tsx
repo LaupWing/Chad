@@ -4,7 +4,6 @@ import { IoSaveOutline, IoSaveSharp } from "react-icons/io5"
 import { BsThreeDots } from "react-icons/bs"
 
 const FeedItem = ({post}:any) => {
-   console.log(post)
    return (
       <div className="flex flex-col border border-gray2 rounded my-3 shadow-md m-0.5 text-gray5">
          <header className="border-b border-gray-400 w-full flex items-center flex-shrink-0 p-4 text-gray5">
