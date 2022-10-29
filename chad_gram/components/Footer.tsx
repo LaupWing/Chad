@@ -18,11 +18,11 @@ const Footer = () => {
          />
          <div className="w-1/5 flex items-center justify-center">
             <div className="flex flex-col p-0.5 rounded-full border-2 border-gray-500">
-               <img 
+               {/* <img 
                   src={user.avatar} 
                   alt={user.username} 
                   className="rounded-full w-7"
-               />
+               /> */}
             </div>
          </div>
       </footer>
