@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic"
 import React from 'react'
-import { AiFillCustomerService, AiOutlineCompass, AiOutlineHome, AiOutlinePlusSquare, AiOutlineSend } from "react-icons/ai"
+import { AiOutlineCompass, AiOutlineHome, AiOutlinePlusSquare, AiOutlineSend } from "react-icons/ai"
 import { createRandomUser } from "../faker"
 
 const Footer = () => {
