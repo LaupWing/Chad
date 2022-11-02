@@ -41,9 +41,10 @@ const CreatePost:FC<Props> = ({isOpen, setOpen}) => {
                         <Dialog.Title as="h3" className="text-lg font-medium leading-6 text-gray-900 border-b border-gray1 py-2 text-center">
                            Create post
                         </Dialog.Title>
-                        <div className="w-full flex flex-col text-gray4 justify-center items-center py-6">
+                        <div className="w-full flex flex-col text-gray4 justify-center items-center py-20">
                            <IoImagesOutline size={60}/>
                            <p className="my-4 text-xl">Drag photos or videos here</p>
+                           <button className="btn">Select from computer</button>
                         </div>
                      </Dialog.Panel>
                   </Transition.Child>
