@@ -10,7 +10,7 @@ import CreatePost from "../components/CreatePost"
 const Home: NextPage = () => {
    const [users, setUsers] = useState<any>([])
    const [posts, setPosts] = useState<any>([])
-   const [isOpen, setOpen] = useState(false)
+   const [showCreatePost, setShowCreatePost] = useState(false)
 
    useEffect(()=>{
       setUsers([...new Array(2)].map(_=>createRandomUser()))
@@ -20,7 +20,10 @@ const Home: NextPage = () => {
    
    return (
       <div className="flex w-screen min-h-screen flex-col bg-gray1">
-         <CreatePost isOpen={isOpen} setOpen={setOpen}/>
+         <CreatePost 
+            isOpen={showCreatePost} 
+            setOpen={setShowCreatePost}
+         />
          <Header/>
          <div className="w-full px-0.5">
             <div className="w-full border-gray2 border p-4 space-x-2 rounded shadow flex">
@@ -31,7 +34,6 @@ const Home: NextPage = () => {
             </div>
          </div>
          {posts.map((post:any, index:number)=> <FeedItem post={post} key={index}/>)}
-         <button onClick={()=>setOpen(true)}>Open</button>
          <Footer/>
       </div>
    )
