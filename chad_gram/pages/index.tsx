@@ -34,7 +34,9 @@ const Home: NextPage = () => {
             </div>
          </div>
          {posts.map((post:any, index:number)=> <FeedItem post={post} key={index}/>)}
-         <Footer/>
+         <Footer
+            setShowCreatePost={setShowCreatePost}
+         />
       </div>
    )
 }
