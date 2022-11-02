@@ -1,5 +1,6 @@
 import { Dialog, Transition } from "@headlessui/react"
 import React, { FC, Fragment } from 'react'
+import { IoImagesOutline } from "react-icons/io5"
 
 interface Props {
    isOpen: boolean,
@@ -36,10 +37,14 @@ const CreatePost:FC<Props> = ({isOpen, setOpen}) => {
                      leaveFrom="opacity-100 scale-100"
                      leaveTo="opacity-0 scale-95"
                   >
-                     <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-4 text-left align-middle shadow-xl transition-all">
-                        <Dialog.Title as="h3" className="text-lg font-medium leading-6 text-gray-900">
+                     <Dialog.Panel className="w-full text-gray5 max-w-md transform overflow-hidden rounded-2xl bg-white text-left align-middle shadow-xl transition-all">
+                        <Dialog.Title as="h3" className="text-lg font-medium leading-6 text-gray-900 border-b border-gray1 py-2 text-center">
                            Create post
                         </Dialog.Title>
+                        <div className="w-full flex flex-col text-gray4 justify-center items-center py-6">
+                           <IoImagesOutline size={60}/>
+                           <p className="my-4 text-xl">Drag photos or videos here</p>
+                        </div>
                      </Dialog.Panel>
                   </Transition.Child>
                </div>
